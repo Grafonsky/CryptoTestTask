@@ -7,10 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		61C068EDC3D59FA38CC0C312 /* Pods_CryptoTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */; };
 		9065AC7427D165AD005E6943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7327D165AD005E6943 /* AppDelegate.swift */; };
 		9065AC7827D165AD005E6943 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7727D165AD005E6943 /* RootViewController.swift */; };
 		9065AC7D27D165AD005E6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9065AC7C27D165AD005E6943 /* Assets.xcassets */; };
 		9065AC8027D165AD005E6943 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9065AC7E27D165AD005E6943 /* LaunchScreen.storyboard */; };
+		9065AC8C27D16719005E6943 /* StorageEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC8B27D16719005E6943 /* StorageEnum.swift */; };
+		9065AC9127D1675C005E6943 /* CryptoService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC9027D1675C005E6943 /* CryptoService.swift */; };
+		9065AC9327D167DA005E6943 /* StorageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC9227D167DA005E6943 /* StorageService.swift */; };
+		9065AC9D27D1686F005E6943 /* CryptoAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC9C27D1686F005E6943 /* CryptoAssembly.swift */; };
+		9065AC9F27D16886005E6943 /* CryptoRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC9E27D16886005E6943 /* CryptoRouter.swift */; };
+		9065ACA127D168C0005E6943 /* CryptoEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACA027D168C0005E6943 /* CryptoEntity.swift */; };
+		9065ACA327D168CF005E6943 /* CryptoPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACA227D168CF005E6943 /* CryptoPresenter.swift */; };
+		9065ACA527D1690B005E6943 /* CryptoInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACA427D1690B005E6943 /* CryptoInteractor.swift */; };
+		9065ACA727D16953005E6943 /* CryptoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACA627D16953005E6943 /* CryptoViewController.swift */; };
+		9065ACA927D1696E005E6943 /* CryptoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9065ACA827D1696E005E6943 /* CryptoView.storyboard */; };
+		9065ACAD27D1699B005E6943 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACAB27D1699B005E6943 /* CoinCell.swift */; };
+		9065ACAE27D1699B005E6943 /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9065ACAC27D1699B005E6943 /* CoinCell.xib */; };
+		9065ACB027D169E8005E6943 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACAF27D169E8005E6943 /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -20,6 +34,22 @@
 		9065AC7C27D165AD005E6943 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9065AC7F27D165AD005E6943 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9065AC8127D165AD005E6943 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9065AC8B27D16719005E6943 /* StorageEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageEnum.swift; sourceTree = "<group>"; };
+		9065AC9027D1675C005E6943 /* CryptoService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoService.swift; sourceTree = "<group>"; };
+		9065AC9227D167DA005E6943 /* StorageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageService.swift; sourceTree = "<group>"; };
+		9065AC9C27D1686F005E6943 /* CryptoAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoAssembly.swift; sourceTree = "<group>"; };
+		9065AC9E27D16886005E6943 /* CryptoRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoRouter.swift; sourceTree = "<group>"; };
+		9065ACA027D168C0005E6943 /* CryptoEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoEntity.swift; sourceTree = "<group>"; };
+		9065ACA227D168CF005E6943 /* CryptoPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoPresenter.swift; sourceTree = "<group>"; };
+		9065ACA427D1690B005E6943 /* CryptoInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoInteractor.swift; sourceTree = "<group>"; };
+		9065ACA627D16953005E6943 /* CryptoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoViewController.swift; sourceTree = "<group>"; };
+		9065ACA827D1696E005E6943 /* CryptoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CryptoView.storyboard; sourceTree = "<group>"; };
+		9065ACAB27D1699B005E6943 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
+		9065ACAC27D1699B005E6943 /* CoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinCell.xib; sourceTree = "<group>"; };
+		9065ACAF27D169E8005E6943 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
+		94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9A3674D359F40F460BF1756E /* Pods-CryptoTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTestTask.debug.xcconfig"; path = "Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask.debug.xcconfig"; sourceTree = "<group>"; };
+		FBBD45D00D56B657AD400426 /* Pods-CryptoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTestTask.release.xcconfig"; path = "Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -27,17 +57,37 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				61C068EDC3D59FA38CC0C312 /* Pods_CryptoTestTask.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		45677D27BEE888D3D9465E17 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9A3674D359F40F460BF1756E /* Pods-CryptoTestTask.debug.xcconfig */,
+				FBBD45D00D56B657AD400426 /* Pods-CryptoTestTask.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		4B964A31C7BC5A62B9B360DF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		9065AC6727D165AD005E6943 = {
 			isa = PBXGroup;
 			children = (
 				9065AC7227D165AD005E6943 /* CryptoTestTask */,
 				9065AC7127D165AD005E6943 /* Products */,
+				45677D27BEE888D3D9465E17 /* Pods */,
+				4B964A31C7BC5A62B9B360DF /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -52,6 +102,8 @@
 		9065AC7227D165AD005E6943 /* CryptoTestTask */ = {
 			isa = PBXGroup;
 			children = (
+				9065AC8D27D16735005E6943 /* PresentationLayer */,
+				9065AC8827D16700005E6943 /* BusinessLayer */,
 				9065AC8727D1660E005E6943 /* ApplicationLayer */,
 				9065AC7727D165AD005E6943 /* RootViewController.swift */,
 				9065AC7C27D165AD005E6943 /* Assets.xcassets */,
@@ -69,6 +121,129 @@
 			path = ApplicationLayer;
 			sourceTree = "<group>";
 		};
+		9065AC8827D16700005E6943 /* BusinessLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC8927D16709005E6943 /* Models */,
+			);
+			path = BusinessLayer;
+			sourceTree = "<group>";
+		};
+		9065AC8927D16709005E6943 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC8A27D16710005E6943 /* Enums */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		9065AC8A27D16710005E6943 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC8B27D16719005E6943 /* StorageEnum.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		9065AC8D27D16735005E6943 /* PresentationLayer */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9427D16819005E6943 /* Modules */,
+				9065AC8E27D16749005E6943 /* Services */,
+			);
+			path = PresentationLayer;
+			sourceTree = "<group>";
+		};
+		9065AC8E27D16749005E6943 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9027D1675C005E6943 /* CryptoService.swift */,
+				9065AC9227D167DA005E6943 /* StorageService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		9065AC9427D16819005E6943 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9527D1682E005E6943 /* CryptoModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		9065AC9527D1682E005E6943 /* CryptoModule */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9B27D16859005E6943 /* Assembly */,
+				9065AC9A27D16851005E6943 /* View */,
+				9065AC9927D16848005E6943 /* Interactor */,
+				9065AC9827D1683C005E6943 /* Presenter */,
+				9065AC9727D16836005E6943 /* Entity */,
+				9065AC9627D16832005E6943 /* Router */,
+				9065ACAF27D169E8005E6943 /* Module.swift */,
+			);
+			path = CryptoModule;
+			sourceTree = "<group>";
+		};
+		9065AC9627D16832005E6943 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9E27D16886005E6943 /* CryptoRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9065AC9727D16836005E6943 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9065ACA027D168C0005E6943 /* CryptoEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9065AC9827D1683C005E6943 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9065ACA227D168CF005E6943 /* CryptoPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9065AC9927D16848005E6943 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9065ACA427D1690B005E6943 /* CryptoInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9065AC9A27D16851005E6943 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9065ACAA27D16982005E6943 /* Xibs */,
+				9065ACA627D16953005E6943 /* CryptoViewController.swift */,
+				9065ACA827D1696E005E6943 /* CryptoView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9065AC9B27D16859005E6943 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9065AC9C27D1686F005E6943 /* CryptoAssembly.swift */,
+			);
+			path = Assembly;
+			sourceTree = "<group>";
+		};
+		9065ACAA27D16982005E6943 /* Xibs */ = {
+			isa = PBXGroup;
+			children = (
+				9065ACAB27D1699B005E6943 /* CoinCell.swift */,
+				9065ACAC27D1699B005E6943 /* CoinCell.xib */,
+			);
+			path = Xibs;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -76,9 +251,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9065AC8427D165AD005E6943 /* Build configuration list for PBXNativeTarget "CryptoTestTask" */;
 			buildPhases = (
+				59A222AE9365976D5C217126 /* [CP] Check Pods Manifest.lock */,
 				9065AC6C27D165AD005E6943 /* Sources */,
 				9065AC6D27D165AD005E6943 /* Frameworks */,
 				9065AC6E27D165AD005E6943 /* Resources */,
+				AF7D511180E119573A045073 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -129,18 +306,73 @@
 			files = (
 				9065AC8027D165AD005E6943 /* LaunchScreen.storyboard in Resources */,
 				9065AC7D27D165AD005E6943 /* Assets.xcassets in Resources */,
+				9065ACAE27D1699B005E6943 /* CoinCell.xib in Resources */,
+				9065ACA927D1696E005E6943 /* CryptoView.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		59A222AE9365976D5C217126 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-CryptoTestTask-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		AF7D511180E119573A045073 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		9065AC6C27D165AD005E6943 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9065ACA727D16953005E6943 /* CryptoViewController.swift in Sources */,
+				9065AC9D27D1686F005E6943 /* CryptoAssembly.swift in Sources */,
+				9065AC9327D167DA005E6943 /* StorageService.swift in Sources */,
+				9065AC9127D1675C005E6943 /* CryptoService.swift in Sources */,
+				9065ACB027D169E8005E6943 /* Module.swift in Sources */,
+				9065ACA327D168CF005E6943 /* CryptoPresenter.swift in Sources */,
+				9065ACA127D168C0005E6943 /* CryptoEntity.swift in Sources */,
 				9065AC7827D165AD005E6943 /* RootViewController.swift in Sources */,
 				9065AC7427D165AD005E6943 /* AppDelegate.swift in Sources */,
+				9065ACA527D1690B005E6943 /* CryptoInteractor.swift in Sources */,
+				9065AC9F27D16886005E6943 /* CryptoRouter.swift in Sources */,
+				9065ACAD27D1699B005E6943 /* CoinCell.swift in Sources */,
+				9065AC8C27D16719005E6943 /* StorageEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,6 +508,7 @@
 		};
 		9065AC8527D165AD005E6943 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9A3674D359F40F460BF1756E /* Pods-CryptoTestTask.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -305,6 +538,7 @@
 		};
 		9065AC8627D165AD005E6943 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FBBD45D00D56B657AD400426 /* Pods-CryptoTestTask.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
