@@ -11,7 +11,7 @@ import UIKit
 // MARK: - Protocol
 
 protocol CryptoRouterInput {
-    func showDetailsScreen(output: ModuleOutput)
+    func showDetailsScreen(id: String)
 }
 
 // MARK: - Implementation
@@ -19,8 +19,10 @@ protocol CryptoRouterInput {
 final class CryptoRouterImp: CryptoRouterInput {
     weak var view: UIViewController?
     
-    func showDetailsScreen(output: ModuleOutput) {
+    func showDetailsScreen(id: String) {
         guard let view = view else { return }
-        view.dismiss(animated: true)
+        guard let controller = DetailsAssembly.configDetailsModule(id: id) else { return }
+        controller.modalPresentationStyle = .formSheet
+        view.present(controller, animated: true)
     }
 }

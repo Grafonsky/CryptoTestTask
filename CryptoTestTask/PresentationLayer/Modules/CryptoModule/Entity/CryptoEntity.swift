@@ -11,5 +11,8 @@ struct CryptoEntity: Codable {
     var image: String
     var current_price: Double
     var market_cap: Double
-    var isFavorite: Bool?
+}
+
+struct FavoritesCoins {
+    var name: String
 }

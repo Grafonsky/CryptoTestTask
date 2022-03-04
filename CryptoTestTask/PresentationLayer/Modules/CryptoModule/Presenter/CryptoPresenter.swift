@@ -12,16 +12,18 @@ import Foundation
 protocol CryptoPresenterInput {
     var view: CryptoPresenterOutput? { get set }
     var entity: [CryptoEntity] { get set }
+    var favorites: [String] { get set }
     
     func viewIsReady()
     func refresh()
     func changeSorting()
     func addToFavorites(name: String)
-    func showDetails(name: String)
+    func showDetails(id: String)
 }
 
 protocol CryptoPresenterOutput: AnyObject {
     func setState()
+    func updateFavorites()
 }
 
 // MARK: - Protocols funcs
@@ -34,6 +36,7 @@ final class CryptoPresenterImp: CryptoPresenterInput {
     var router: CryptoRouterInput!
     
     var entity: [CryptoEntity] = []
+    var favorites: [String] = []
     
     // MARK: - Protocol funcs
     
@@ -54,9 +57,8 @@ final class CryptoPresenterImp: CryptoPresenterInput {
         interactor.addToFavorites(name: name)
     }
     
-    func showDetails(name: String) {
-        //        let
-        //        router.showDetailsScreen(coin: CryptoEntity)
+    func showDetails(id: String) {
+        router.showDetailsScreen(id: id)
     }
     
     // MARK: - Private funcs
@@ -69,9 +71,16 @@ final class CryptoPresenterImp: CryptoPresenterInput {
 // MARK: - Extensions
 
 extension CryptoPresenterImp: CryptoInteractorOutput {
-    func updateData(entity: [CryptoEntity]) {
+    func updateEntity(entity: [CryptoEntity]) {
         self.entity = entity
         view?.setState()
     }
+    
+    func updateFavorites(favorites: [String]) {
+        self.favorites = favorites
+        view?.updateFavorites()
+    }
+    
+    
 }
 

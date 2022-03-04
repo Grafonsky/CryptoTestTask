@@ -8,6 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		61C068EDC3D59FA38CC0C312 /* Pods_CryptoTestTask.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */; };
+		9043587127D16ED300F4A358 /* DetailedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043587027D16ED300F4A358 /* DetailedModel.swift */; };
+		9043587A27D17D3900F4A358 /* DetailsPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043587927D17D3900F4A358 /* DetailsPresenter.swift */; };
+		9043587C27D17DC400F4A358 /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043587B27D17DC400F4A358 /* DetailsViewController.swift */; };
+		9043587E27D17DCA00F4A358 /* DetailsView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9043587D27D17DCA00F4A358 /* DetailsView.storyboard */; };
+		9043588027D17E1900F4A358 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043587F27D17E1900F4A358 /* DetailsInteractor.swift */; };
+		9043588227D17E5000F4A358 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043588127D17E5000F4A358 /* DetailsRouter.swift */; };
+		9043588427D17F3500F4A358 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043588327D17F3500F4A358 /* DetailsAssembly.swift */; };
 		9065AC7427D165AD005E6943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7327D165AD005E6943 /* AppDelegate.swift */; };
 		9065AC7827D165AD005E6943 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7727D165AD005E6943 /* RootViewController.swift */; };
 		9065AC7D27D165AD005E6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9065AC7C27D165AD005E6943 /* Assets.xcassets */; };
@@ -24,10 +31,16 @@
 		9065ACA927D1696E005E6943 /* CryptoView.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9065ACA827D1696E005E6943 /* CryptoView.storyboard */; };
 		9065ACAD27D1699B005E6943 /* CoinCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACAB27D1699B005E6943 /* CoinCell.swift */; };
 		9065ACAE27D1699B005E6943 /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9065ACAC27D1699B005E6943 /* CoinCell.xib */; };
-		9065ACB027D169E8005E6943 /* Module.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065ACAF27D169E8005E6943 /* Module.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9043587027D16ED300F4A358 /* DetailedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedModel.swift; sourceTree = "<group>"; };
+		9043587927D17D3900F4A358 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
+		9043587B27D17DC400F4A358 /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
+		9043587D27D17DCA00F4A358 /* DetailsView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DetailsView.storyboard; sourceTree = "<group>"; };
+		9043587F27D17E1900F4A358 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
+		9043588127D17E5000F4A358 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
+		9043588327D17F3500F4A358 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
 		9065AC7027D165AD005E6943 /* CryptoTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9065AC7327D165AD005E6943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9065AC7727D165AD005E6943 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -46,7 +59,6 @@
 		9065ACA827D1696E005E6943 /* CryptoView.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = CryptoView.storyboard; sourceTree = "<group>"; };
 		9065ACAB27D1699B005E6943 /* CoinCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoinCell.swift; sourceTree = "<group>"; };
 		9065ACAC27D1699B005E6943 /* CoinCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CoinCell.xib; sourceTree = "<group>"; };
-		9065ACAF27D169E8005E6943 /* Module.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Module.swift; sourceTree = "<group>"; };
 		94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CryptoTestTask.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9A3674D359F40F460BF1756E /* Pods-CryptoTestTask.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTestTask.debug.xcconfig"; path = "Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask.debug.xcconfig"; sourceTree = "<group>"; };
 		FBBD45D00D56B657AD400426 /* Pods-CryptoTestTask.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CryptoTestTask.release.xcconfig"; path = "Target Support Files/Pods-CryptoTestTask/Pods-CryptoTestTask.release.xcconfig"; sourceTree = "<group>"; };
@@ -79,6 +91,68 @@
 				94317BA962D1E4E73B2441EC /* Pods_CryptoTestTask.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		9043587227D1726D00F4A358 /* DetailsModule */ = {
+			isa = PBXGroup;
+			children = (
+				9043587827D172B600F4A358 /* Assembly */,
+				9043587727D172B300F4A358 /* View */,
+				9043587627D172AE00F4A358 /* Interactor */,
+				9043587527D172A900F4A358 /* Presenter */,
+				9043587427D172A200F4A358 /* Entity */,
+				9043587327D1729E00F4A358 /* Router */,
+			);
+			path = DetailsModule;
+			sourceTree = "<group>";
+		};
+		9043587327D1729E00F4A358 /* Router */ = {
+			isa = PBXGroup;
+			children = (
+				9043588127D17E5000F4A358 /* DetailsRouter.swift */,
+			);
+			path = Router;
+			sourceTree = "<group>";
+		};
+		9043587427D172A200F4A358 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				9043587027D16ED300F4A358 /* DetailedModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		9043587527D172A900F4A358 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				9043587927D17D3900F4A358 /* DetailsPresenter.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		9043587627D172AE00F4A358 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				9043587F27D17E1900F4A358 /* DetailsInteractor.swift */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		9043587727D172B300F4A358 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				9043587B27D17DC400F4A358 /* DetailsViewController.swift */,
+				9043587D27D17DCA00F4A358 /* DetailsView.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		9043587827D172B600F4A358 /* Assembly */ = {
+			isa = PBXGroup;
+			children = (
+				9043588327D17F3500F4A358 /* DetailsAssembly.swift */,
+			);
+			path = Assembly;
 			sourceTree = "<group>";
 		};
 		9065AC6727D165AD005E6943 = {
@@ -166,6 +240,7 @@
 		9065AC9427D16819005E6943 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				9043587227D1726D00F4A358 /* DetailsModule */,
 				9065AC9527D1682E005E6943 /* CryptoModule */,
 			);
 			path = Modules;
@@ -180,7 +255,6 @@
 				9065AC9827D1683C005E6943 /* Presenter */,
 				9065AC9727D16836005E6943 /* Entity */,
 				9065AC9627D16832005E6943 /* Router */,
-				9065ACAF27D169E8005E6943 /* Module.swift */,
 			);
 			path = CryptoModule;
 			sourceTree = "<group>";
@@ -306,6 +380,7 @@
 			files = (
 				9065AC8027D165AD005E6943 /* LaunchScreen.storyboard in Resources */,
 				9065AC7D27D165AD005E6943 /* Assets.xcassets in Resources */,
+				9043587E27D17DCA00F4A358 /* DetailsView.storyboard in Resources */,
 				9065ACAE27D1699B005E6943 /* CoinCell.xib in Resources */,
 				9065ACA927D1696E005E6943 /* CryptoView.storyboard in Resources */,
 			);
@@ -362,13 +437,18 @@
 			files = (
 				9065ACA727D16953005E6943 /* CryptoViewController.swift in Sources */,
 				9065AC9D27D1686F005E6943 /* CryptoAssembly.swift in Sources */,
+				9043587A27D17D3900F4A358 /* DetailsPresenter.swift in Sources */,
 				9065AC9327D167DA005E6943 /* StorageService.swift in Sources */,
+				9043588027D17E1900F4A358 /* DetailsInteractor.swift in Sources */,
 				9065AC9127D1675C005E6943 /* CryptoService.swift in Sources */,
-				9065ACB027D169E8005E6943 /* Module.swift in Sources */,
+				9043588227D17E5000F4A358 /* DetailsRouter.swift in Sources */,
+				9043588427D17F3500F4A358 /* DetailsAssembly.swift in Sources */,
 				9065ACA327D168CF005E6943 /* CryptoPresenter.swift in Sources */,
 				9065ACA127D168C0005E6943 /* CryptoEntity.swift in Sources */,
 				9065AC7827D165AD005E6943 /* RootViewController.swift in Sources */,
+				9043587127D16ED300F4A358 /* DetailedModel.swift in Sources */,
 				9065AC7427D165AD005E6943 /* AppDelegate.swift in Sources */,
+				9043587C27D17DC400F4A358 /* DetailsViewController.swift in Sources */,
 				9065ACA527D1690B005E6943 /* CryptoInteractor.swift in Sources */,
 				9065AC9F27D16886005E6943 /* CryptoRouter.swift in Sources */,
 				9065ACAD27D1699B005E6943 /* CoinCell.swift in Sources */,

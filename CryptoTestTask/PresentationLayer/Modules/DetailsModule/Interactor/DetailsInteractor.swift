@@ -1,5 +1,5 @@
 //
-//  CryptoInteractor.swift
+//  DetailsInteractor.swift
 //  CryptoTestTask
 //
 //  Created by Bohdan Hawrylyshyn on 04.03.2022.
@@ -9,43 +9,38 @@ import Foundation
 
 // MARK: - Protocol
 
-protocol CryptoInteractorInput {
-    var output: CryptoInteractorOutput? { get set }
-    
-    func loadCryptoList()
-    func addToFavorites(name: String)
+protocol DetailsInteractorInput {
+    var output: DetailsInteractorOutput? { get set }
+    func loadDetails(id: String)
+    func onFavorite(name: String)
 }
 
-protocol CryptoInteractorOutput: AnyObject {
-    func updateEntity(entity: [CryptoEntity])
+protocol DetailsInteractorOutput: AnyObject {
+    func updateModel(model: DetailedModel)
     func updateFavorites(favorites: [String])
 }
 
 // MARK: - Implementation
 
-final class CryptoInteractorImp: CryptoInteractorInput {
-    
-    weak var output: CryptoInteractorOutput?
-    
+final class DetailsInteractorImp: DetailsInteractorInput {
+    weak var output: DetailsInteractorOutput?
+
     var cryptoService: CryptoServiceImp!
     var storageService: StorageServiceImp!
-    
-    // MARK: - Protocol funcs
-    
-    func loadCryptoList() {
-        output?.updateFavorites(favorites: loadFavorites())
-        setOldModel()
-        self.cryptoService.getCryptoList{ [weak self] coins in
-            DispatchQueue.main.async {
-                self?.output?.updateEntity(entity: coins)
-            }
-            self?.saveEntity(entity: coins)
 
+
+    // MARK: - Protocol funcs
+
+    func loadDetails(id: String) {
+        output?.updateFavorites(favorites: loadFavorites())
+        cryptoService.getCryptoDetails(id: id) { [weak self] model in
+            DispatchQueue.main.sync {
+                self?.output?.updateModel(model: model)
+            }
         }
-        
     }
     
-    func addToFavorites(name: String) {
+    func onFavorite(name: String) {
         var favorites = loadFavorites()
         if !favorites.contains(name) {
             favorites.append(name)
@@ -62,24 +57,6 @@ final class CryptoInteractorImp: CryptoInteractorInput {
     
     // MARK: - Private funcs
     
-    private func setOldModel() {
-        guard let oldModel = loadEntity() else { return }
-        self.output?.updateEntity(entity: oldModel)
-    }
-    
-    private func saveEntity(entity: [CryptoEntity]) {
-        let encoder = JSONEncoder()
-        let data = try? encoder.encode(entity)
-        storageService.setData(key: StorageEnum.cryptoEntity, value: data)
-    }
-    
-    private func loadEntity() -> [CryptoEntity]? {
-        let decoder = JSONDecoder()
-        let data = storageService.getData(key: StorageEnum.cryptoEntity)
-        let entity = try? decoder.decode([CryptoEntity].self, from: data)
-        return entity
-    }
-    
     private func saveFavorites(favorites: [String]) {
         let encoder = JSONEncoder()
         let data = try? encoder.encode(favorites)
@@ -92,4 +69,6 @@ final class CryptoInteractorImp: CryptoInteractorInput {
         guard let favorites = try? decoder.decode([String].self, from: data) else { return [] }
         return favorites
     }
+
+    
 }

@@ -104,12 +104,11 @@ class CryptoViewController: UIViewController {
     
     @objc private func actionSorting() {
         presenter.changeSorting()
-//        if sortingPic.image == UIImage(systemName: "arrow.up") {
-//            sortingPic.image = UIImage(systemName: "arrow.down")
-//        } else {
-//            sortingPic.image = UIImage(systemName: "arrow.up")
-//        }
-
+        if sortingPic.image == UIImage(systemName: "arrow.up") {
+            sortingPic.image = UIImage(systemName: "arrow.down")
+        } else {
+            sortingPic.image = UIImage(systemName: "arrow.up")
+        }
     }
 
 }
@@ -128,6 +127,11 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
             if let imageData: NSData = NSData(contentsOf: url) {
                 cell.logo.image = UIImage(data: imageData as Data)
             }
+            if presenter.favorites.contains(crypto.name) {
+                cell.favoritePic.image = UIImage(systemName: "star.fill")
+            } else {
+                cell.favoritePic.image = UIImage(systemName: "star")
+            }
             cell.currentPrice.text = "$\(NSString(format:"%.2f", crypto.current_price))"
             cell.totalCapitalization.text = "$\(NSString(format:"%.2f", crypto.market_cap))"
             cell.onFavorite = {[weak self] in
@@ -144,13 +148,18 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-//        presenter.showDetails()
+        let crypto = entity[indexPath.row]
+        presenter.showDetails(id: crypto.id)
     }
 }
 
 extension CryptoViewController: CryptoPresenterOutput {
     func setState() {
         entity = presenter.entity
+        tableView.reloadData()
+    }
+    
+    func updateFavorites() {
         tableView.reloadData()
     }
 }

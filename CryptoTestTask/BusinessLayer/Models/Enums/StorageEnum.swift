@@ -7,4 +7,5 @@
 
 enum StorageEnum {
     static let cryptoEntity = "CryptoEntity"
+    static let favorites = "Favorites"
 }

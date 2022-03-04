@@ -29,6 +29,8 @@ final class CryptoAssembly {
         
         controller.presenter = presenter
         
+        router.view = controller
+        
         return controller
     }
 }
