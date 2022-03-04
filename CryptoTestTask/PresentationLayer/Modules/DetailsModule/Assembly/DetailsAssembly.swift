@@ -27,7 +27,7 @@ final class DetailsAssembly {
         
         controller.presenter = presenter
         controller.currentCoin = id
-                
+        
         return controller
     }
 }

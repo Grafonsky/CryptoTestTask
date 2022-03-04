@@ -16,20 +16,14 @@ class CoinCell: UITableViewCell {
     lazy var currentPrice = UILabel()
     lazy var favoritePic = UIImageView()
     lazy var favoriteButton = UIButton()
-
+    
     var onFavorite: (() -> ())?
     
     // MARK: - Lifecycle
-
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         config()
-    }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
     }
     
     // MARK: - Config
@@ -104,6 +98,5 @@ class CoinCell: UITableViewCell {
     @objc private func actionFavorite() {
         onFavorite?()
     }
-
-
+    
 }

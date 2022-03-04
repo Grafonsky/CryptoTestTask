@@ -23,7 +23,7 @@ class DetailsViewController: UIViewController {
     lazy var lowPerDay = UILabel()
     lazy var atlDate = UILabel()
     lazy var isFavorite = UIImageView()
-
+    
     var currentCoin: String = ""
     var coinName: String = ""
     
@@ -31,14 +31,11 @@ class DetailsViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         presenter.viewIsReady(id: currentCoin)
-
     }
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
-
-        
     }
     
     // MARK: - Config
@@ -54,7 +51,6 @@ class DetailsViewController: UIViewController {
         configHighPerDay()
         configLowPerDay()
         configAtlDate()
-        
     }
     
     private func configRefresh() {
@@ -184,7 +180,7 @@ class DetailsViewController: UIViewController {
             return false
         }
     }
-
+    
     
     // MARK: - Actions
     
@@ -234,6 +230,6 @@ extension DetailsViewController: DetailsPresenterOutput {
         } else {
             favoritePic.image = UIImage(systemName: "star")
         }
-  
+        
     }
 }

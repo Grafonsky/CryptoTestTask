@@ -24,13 +24,13 @@ protocol DetailsInteractorOutput: AnyObject {
 
 final class DetailsInteractorImp: DetailsInteractorInput {
     weak var output: DetailsInteractorOutput?
-
+    
     var cryptoService: CryptoServiceImp!
     var storageService: StorageServiceImp!
-
-
+    
+    
     // MARK: - Protocol funcs
-
+    
     func loadDetails(id: String) {
         output?.updateFavorites(favorites: loadFavorites())
         cryptoService.getCryptoDetails(id: id) { [weak self] model in
@@ -69,6 +69,5 @@ final class DetailsInteractorImp: DetailsInteractorInput {
         guard let favorites = try? decoder.decode([String].self, from: data) else { return [] }
         return favorites
     }
-
     
 }

@@ -15,6 +15,9 @@
 		9043588027D17E1900F4A358 /* DetailsInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043587F27D17E1900F4A358 /* DetailsInteractor.swift */; };
 		9043588227D17E5000F4A358 /* DetailsRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043588127D17E5000F4A358 /* DetailsRouter.swift */; };
 		9043588427D17F3500F4A358 /* DetailsAssembly.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043588327D17F3500F4A358 /* DetailsAssembly.swift */; };
+		9043588C27D1B24200F4A358 /* CryptoTestTaskTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043588B27D1B24200F4A358 /* CryptoTestTaskTests.swift */; };
+		9043589427D1B25B00F4A358 /* CryptoServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043589327D1B25B00F4A358 /* CryptoServiceTest.swift */; };
+		9043589627D1B39800F4A358 /* StorageServiceTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9043589527D1B39800F4A358 /* StorageServiceTest.swift */; };
 		9065AC7427D165AD005E6943 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7327D165AD005E6943 /* AppDelegate.swift */; };
 		9065AC7827D165AD005E6943 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9065AC7727D165AD005E6943 /* RootViewController.swift */; };
 		9065AC7D27D165AD005E6943 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9065AC7C27D165AD005E6943 /* Assets.xcassets */; };
@@ -33,6 +36,16 @@
 		9065ACAE27D1699B005E6943 /* CoinCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9065ACAC27D1699B005E6943 /* CoinCell.xib */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		9043588D27D1B24200F4A358 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9065AC6827D165AD005E6943 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9065AC6F27D165AD005E6943;
+			remoteInfo = CryptoTestTask;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
 		9043587027D16ED300F4A358 /* DetailedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailedModel.swift; sourceTree = "<group>"; };
 		9043587927D17D3900F4A358 /* DetailsPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsPresenter.swift; sourceTree = "<group>"; };
@@ -41,6 +54,10 @@
 		9043587F27D17E1900F4A358 /* DetailsInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsInteractor.swift; sourceTree = "<group>"; };
 		9043588127D17E5000F4A358 /* DetailsRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsRouter.swift; sourceTree = "<group>"; };
 		9043588327D17F3500F4A358 /* DetailsAssembly.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsAssembly.swift; sourceTree = "<group>"; };
+		9043588927D1B24200F4A358 /* CryptoTestTaskTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CryptoTestTaskTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		9043588B27D1B24200F4A358 /* CryptoTestTaskTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoTestTaskTests.swift; sourceTree = "<group>"; };
+		9043589327D1B25B00F4A358 /* CryptoServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CryptoServiceTest.swift; sourceTree = "<group>"; };
+		9043589527D1B39800F4A358 /* StorageServiceTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageServiceTest.swift; sourceTree = "<group>"; };
 		9065AC7027D165AD005E6943 /* CryptoTestTask.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CryptoTestTask.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9065AC7327D165AD005E6943 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9065AC7727D165AD005E6943 /* RootViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +82,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		9043588627D1B24200F4A358 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9065AC6D27D165AD005E6943 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -155,10 +179,29 @@
 			path = Assembly;
 			sourceTree = "<group>";
 		};
+		9043588A27D1B24200F4A358 /* CryptoTestTaskTests */ = {
+			isa = PBXGroup;
+			children = (
+				9043589227D1B24F00F4A358 /* Services */,
+				9043588B27D1B24200F4A358 /* CryptoTestTaskTests.swift */,
+			);
+			path = CryptoTestTaskTests;
+			sourceTree = "<group>";
+		};
+		9043589227D1B24F00F4A358 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				9043589327D1B25B00F4A358 /* CryptoServiceTest.swift */,
+				9043589527D1B39800F4A358 /* StorageServiceTest.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		9065AC6727D165AD005E6943 = {
 			isa = PBXGroup;
 			children = (
 				9065AC7227D165AD005E6943 /* CryptoTestTask */,
+				9043588A27D1B24200F4A358 /* CryptoTestTaskTests */,
 				9065AC7127D165AD005E6943 /* Products */,
 				45677D27BEE888D3D9465E17 /* Pods */,
 				4B964A31C7BC5A62B9B360DF /* Frameworks */,
@@ -169,6 +212,7 @@
 			isa = PBXGroup;
 			children = (
 				9065AC7027D165AD005E6943 /* CryptoTestTask.app */,
+				9043588927D1B24200F4A358 /* CryptoTestTaskTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -321,6 +365,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		9043588827D1B24200F4A358 /* CryptoTestTaskTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 9043589127D1B24200F4A358 /* Build configuration list for PBXNativeTarget "CryptoTestTaskTests" */;
+			buildPhases = (
+				9043588527D1B24200F4A358 /* Sources */,
+				9043588627D1B24200F4A358 /* Frameworks */,
+				9043588727D1B24200F4A358 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				9043588E27D1B24200F4A358 /* PBXTargetDependency */,
+			);
+			name = CryptoTestTaskTests;
+			productName = CryptoTestTaskTests;
+			productReference = 9043588927D1B24200F4A358 /* CryptoTestTaskTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		9065AC6F27D165AD005E6943 /* CryptoTestTask */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 9065AC8427D165AD005E6943 /* Build configuration list for PBXNativeTarget "CryptoTestTask" */;
@@ -350,6 +412,10 @@
 				LastSwiftUpdateCheck = 1320;
 				LastUpgradeCheck = 1320;
 				TargetAttributes = {
+					9043588827D1B24200F4A358 = {
+						CreatedOnToolsVersion = 13.2.1;
+						TestTargetID = 9065AC6F27D165AD005E6943;
+					};
 					9065AC6F27D165AD005E6943 = {
 						CreatedOnToolsVersion = 13.2.1;
 					};
@@ -369,11 +435,19 @@
 			projectRoot = "";
 			targets = (
 				9065AC6F27D165AD005E6943 /* CryptoTestTask */,
+				9043588827D1B24200F4A358 /* CryptoTestTaskTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		9043588727D1B24200F4A358 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9065AC6E27D165AD005E6943 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -431,6 +505,16 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		9043588527D1B24200F4A358 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				9043589427D1B25B00F4A358 /* CryptoServiceTest.swift in Sources */,
+				9043589627D1B39800F4A358 /* StorageServiceTest.swift in Sources */,
+				9043588C27D1B24200F4A358 /* CryptoTestTaskTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		9065AC6C27D165AD005E6943 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -458,6 +542,14 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXTargetDependency section */
+		9043588E27D1B24200F4A358 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9065AC6F27D165AD005E6943 /* CryptoTestTask */;
+			targetProxy = 9043588D27D1B24200F4A358 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
 /* Begin PBXVariantGroup section */
 		9065AC7E27D165AD005E6943 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
@@ -470,6 +562,42 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		9043588F27D1B24200F4A358 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5C6Y689FA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grafonsky.CryptoTestTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTestTask.app/CryptoTestTask";
+			};
+			name = Debug;
+		};
+		9043589027D1B24200F4A358 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = U5C6Y689FA;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = grafonsky.CryptoTestTaskTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CryptoTestTask.app/CryptoTestTask";
+			};
+			name = Release;
+		};
 		9065AC8227D165AD005E6943 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -649,6 +777,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		9043589127D1B24200F4A358 /* Build configuration list for PBXNativeTarget "CryptoTestTaskTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				9043588F27D1B24200F4A358 /* Debug */,
+				9043589027D1B24200F4A358 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		9065AC6B27D165AD005E6943 /* Build configuration list for PBXProject "CryptoTestTask" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

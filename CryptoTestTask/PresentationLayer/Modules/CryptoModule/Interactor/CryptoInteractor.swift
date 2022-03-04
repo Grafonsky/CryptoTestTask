@@ -32,7 +32,7 @@ final class CryptoInteractorImp: CryptoInteractorInput {
     var storageService: StorageServiceImp!
     
     var pics: [String: UIImage] = [:]
-
+    
     // MARK: - Protocol funcs
     
     func loadCryptoList() {
@@ -48,9 +48,7 @@ final class CryptoInteractorImp: CryptoInteractorInput {
                 self?.output?.updateEntity(entity: coins)
             }
             self?.saveEntity(entity: coins)
-
         }
-        
     }
     
     func addToFavorites(name: String) {

@@ -20,7 +20,7 @@ protocol DetailsPresenterInput {
 protocol DetailsPresenterOutput: AnyObject {
     func setState(model: DetailedModel)
     func updateFavorites()
-
+    
 }
 
 // MARK: - Implementation
@@ -32,7 +32,7 @@ final class DetailsPresenterImp: DetailsPresenterInput {
     var favorites: [String] = []
     
     // MARK: - Protocol funcs
-
+    
     func viewIsReady(id: String) {
         loadDetails(id: id)
     }
@@ -44,7 +44,7 @@ final class DetailsPresenterImp: DetailsPresenterInput {
     func onFavorite(name: String) {
         interactor.onFavorite(name: name)
     }
-   
+    
 }
 
 // MARK: - Extensions

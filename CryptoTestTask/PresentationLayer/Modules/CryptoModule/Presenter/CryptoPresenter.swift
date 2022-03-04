@@ -74,7 +74,7 @@ final class CryptoPresenterImp: CryptoPresenterInput {
 // MARK: - Extensions
 
 extension CryptoPresenterImp: CryptoInteractorOutput {
-
+    
     func updateEntity(entity: [CryptoEntity]) {
         self.entity = entity
         DispatchQueue.main.async {
@@ -90,7 +90,5 @@ extension CryptoPresenterImp: CryptoInteractorOutput {
     func updateLogos(logos: [String : UIImage]) {
         coinsLogo = logos
     }
-    
-    
 }
 

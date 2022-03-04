@@ -28,8 +28,6 @@ final class CryptoServiceImp: CryptoService {
         let session: URLSession = URLSession.shared
         guard let url: URL = URL(string: "https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=\(sorting)&per_page=\(perPage)&page=\(page)&sparkline=false") else { return }
         let request: URLRequest = URLRequest(url: url)
-        print(url)
-
         let task = session.dataTask(with: request) { [weak self] data, response, error in
             DispatchQueue.global(qos: .background).async {
                 guard let parsedData = self?.parseCoinsList(
@@ -46,8 +44,6 @@ final class CryptoServiceImp: CryptoService {
         let session: URLSession = URLSession.shared
         guard let url: URL = URL(string: "https://api.coingecko.com/api/v3/coins/\(id)") else { return }
         let request: URLRequest = URLRequest(url: url)
-        print(url)
-
         let task = session.dataTask(with: request) { [weak self] data, response, error in
             DispatchQueue.global(qos: .background).async {
                 guard let parsedData = self?.parseDetails(

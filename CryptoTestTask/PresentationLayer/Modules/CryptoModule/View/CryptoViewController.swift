@@ -21,7 +21,7 @@ class CryptoViewController: UIViewController {
     var entity: [CryptoEntity] = []
     
     // MARK: - Lifecycle
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         config()
@@ -29,7 +29,7 @@ class CryptoViewController: UIViewController {
     }
     
     // MARK: - Config
-
+    
     private func config() {
         configTopBar()
         configTableView()
@@ -92,7 +92,7 @@ class CryptoViewController: UIViewController {
         tableView.dataSource = self
         tableView.register(UINib(nibName: "CoinCell", bundle: nil), forCellReuseIdentifier: "CoinCell")
         tableView.backgroundColor = .clear
-
+        
     }
     
     // MARK: - Actions
@@ -110,7 +110,7 @@ class CryptoViewController: UIViewController {
             sortingPic.image = UIImage(systemName: "arrow.up")
         }
     }
-
+    
 }
 
 // MARK: - Extensions
@@ -124,10 +124,6 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CoinCell") as? CoinCell {
             cell.name.text = crypto.name
             cell.logo.image = presenter.coinsLogo[crypto.name]
-//            guard let url: URL = URL(string: crypto.image) else { return UITableViewCell() }
-//            if let imageData: NSData = NSData(contentsOf: url) {
-//                cell.logo.image = UIImage(data: imageData as Data)
-//            }
             if presenter.favorites.contains(crypto.name) {
                 cell.favoritePic.image = UIImage(systemName: "star.fill")
             } else {
@@ -141,7 +137,7 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
             cell.backgroundColor = .clear
             return cell
         }
-         return UITableViewCell()
+        return UITableViewCell()
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
