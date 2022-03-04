@@ -5,7 +5,7 @@
 //  Created by Bohdan Hawrylyshyn on 04.03.2022.
 //
 
-import Foundation
+import UIKit
 
 // MARK: - Protocol
 
@@ -19,6 +19,7 @@ protocol CryptoInteractorInput {
 protocol CryptoInteractorOutput: AnyObject {
     func updateEntity(entity: [CryptoEntity])
     func updateFavorites(favorites: [String])
+    func updateLogos(logos: [String: UIImage])
 }
 
 // MARK: - Implementation
@@ -30,13 +31,20 @@ final class CryptoInteractorImp: CryptoInteractorInput {
     var cryptoService: CryptoServiceImp!
     var storageService: StorageServiceImp!
     
+    var pics: [String: UIImage] = [:]
+
     // MARK: - Protocol funcs
     
     func loadCryptoList() {
         output?.updateFavorites(favorites: loadFavorites())
         setOldModel()
         self.cryptoService.getCryptoList{ [weak self] coins in
-            DispatchQueue.main.async {
+            DispatchQueue.global(qos: .background).sync {
+                coins.forEach { [weak self] coin in
+                    self?.loadCoinsLogo(entity: coin)
+                }
+                guard let unwrapDict = self?.pics else { return }
+                self?.output?.updateLogos(logos: unwrapDict)
                 self?.output?.updateEntity(entity: coins)
             }
             self?.saveEntity(entity: coins)
@@ -91,5 +99,12 @@ final class CryptoInteractorImp: CryptoInteractorInput {
         let data = storageService.getData(key: StorageEnum.favorites)
         guard let favorites = try? decoder.decode([String].self, from: data) else { return [] }
         return favorites
+    }
+    
+    private func loadCoinsLogo(entity: CryptoEntity) {
+        guard let url: URL = URL(string: entity.image) else { return }
+        if let imageData: NSData = NSData(contentsOf: url) {
+            pics[entity.name] = UIImage(data: imageData as Data)
+        }
     }
 }

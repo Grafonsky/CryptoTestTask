@@ -123,10 +123,11 @@ extension CryptoViewController: UITableViewDelegate, UITableViewDataSource {
         let crypto = entity[indexPath.row]
         if let cell = tableView.dequeueReusableCell(withIdentifier: "CoinCell") as? CoinCell {
             cell.name.text = crypto.name
-            guard let url: URL = URL(string: crypto.image) else { return UITableViewCell() }
-            if let imageData: NSData = NSData(contentsOf: url) {
-                cell.logo.image = UIImage(data: imageData as Data)
-            }
+            cell.logo.image = presenter.coinsLogo[crypto.name]
+//            guard let url: URL = URL(string: crypto.image) else { return UITableViewCell() }
+//            if let imageData: NSData = NSData(contentsOf: url) {
+//                cell.logo.image = UIImage(data: imageData as Data)
+//            }
             if presenter.favorites.contains(crypto.name) {
                 cell.favoritePic.image = UIImage(systemName: "star.fill")
             } else {

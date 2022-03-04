@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 // MARK: - Protocol
 
@@ -13,6 +14,7 @@ protocol CryptoPresenterInput {
     var view: CryptoPresenterOutput? { get set }
     var entity: [CryptoEntity] { get set }
     var favorites: [String] { get set }
+    var coinsLogo: [String: UIImage] { get set }
     
     func viewIsReady()
     func refresh()
@@ -37,6 +39,7 @@ final class CryptoPresenterImp: CryptoPresenterInput {
     
     var entity: [CryptoEntity] = []
     var favorites: [String] = []
+    var coinsLogo: [String: UIImage] = [:]
     
     // MARK: - Protocol funcs
     
@@ -71,14 +74,21 @@ final class CryptoPresenterImp: CryptoPresenterInput {
 // MARK: - Extensions
 
 extension CryptoPresenterImp: CryptoInteractorOutput {
+
     func updateEntity(entity: [CryptoEntity]) {
         self.entity = entity
-        view?.setState()
+        DispatchQueue.main.async {
+            self.view?.setState()
+        }
     }
     
     func updateFavorites(favorites: [String]) {
         self.favorites = favorites
         view?.updateFavorites()
+    }
+    
+    func updateLogos(logos: [String : UIImage]) {
+        coinsLogo = logos
     }
     
     
